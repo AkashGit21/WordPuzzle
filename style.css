@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main-screen {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  text-align: center;
+  background-color: cyan;
+  padding-top: 5vmin;
+}
+
+
+#grid-side {
+  width: 70%;
+}
+
+#score-side {
+  width: 25%;
+}
+
+.scoring-box {
+  margin: 2vmin 0;
+}
+
+.label-boxes {
+  margin: .5vmin;
+  border: 2px burlywood dashed;
+  border-radius: 2vmin;
+
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: 500;
+  color: brown;
+  background-color: aquamarine;
+}
+
+.score-boxes {
+  margin: .5vmin;
+  border: 2px burlywood dashed;
+  border-radius: 5vmin;
+
+  min-height: 4vmin;
+  font-size: 4vmin;
+  font-style: italic;
+  color: brown;
+  text-transform: uppercase;
+}
+
+#clear-btn, #submit-btn {
+  cursor: pointer;
+}
+
+
+#grid-view {
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(10,minmax(9vmin,1fr));
+}
+
+.letter-box {
+  font-size: 4vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5vmin 0.2vmin;
+  margin: 0.2vmin;
+  background-color: cadetblue;
+  border-radius: 1vmin;
+}
+
+.letter-box :active {
+  border: 4px;
+}
+
+.selected-letter {
+  background-color: lightgray;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+
+.rainbow {
+  position: relative;
+  z-index: 0;
+  border-radius: 1vmin;
+  overflow: hidden;
+}
+.rainbow::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+}
+.rainbow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: white;
+  border-radius: 1vmin;
+}

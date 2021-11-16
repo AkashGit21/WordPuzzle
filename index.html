@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="puzzle.js"></script>
+
+  <title>WordPuzzle</title>
+</head>
+<body onload="main()">
+  <div id="main-screen">
+    <section id="grid-side">
+      <!-- Grid Side -->
+
+      <!-- <canvas id="myGrid">
+
+      </canvas> -->
+
+
+      <div id="grid-view"></div>
+
+    </section>
+    <section id="score-side">
+      <div class="scoring-box">
+        <div class="label-boxes">TIMER</div>
+        <div class="score-boxes rainbow" id="timer-display"></div>
+      </div>      
+      <div class="scoring-box">
+        <div class="label-boxes">WORD</div>
+        <div class="score-boxes rainbow"></div>
+      </div>      
+      <div class="scoring-box">
+        <div class="label-boxes">SCORE</div>
+        <div class="score-boxes rainbow">0</div>
+      </div>
+      <div class="scoring-box">
+        <div class="label-boxes">WORDS</div>
+        <div class="score-boxes rainbow">0</div>
+      </div>
+      <div class="scoring-box">
+        <div class="label-boxes">TOTAL</div>
+        <div class="score-boxes rainbow">0</div>
+      </div>
+      <div class="scoring-box">
+        <div class="label-boxes" id="clear-btn" onclick="clearWord()">CLEAR</div>
+        <div class="label-boxes" id="submit-btn" onclick="submitWord()">SUBMIT</div>
+      </div>
+    </section>
+  </div>  
+</body>
+</html>
