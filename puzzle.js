@@ -8,7 +8,7 @@ let CURRENT_WORD = "";
 let VALID_WORD = false;
 var SCORES = {word:0, total:0, numOfWords:0 };
 let SCOREBOARD = {TIMER:null, CURRENT_WORD:null, WORD_SCORE:null, NUM_OF_WORDS:null, TOTAL_SCORE:null};
-let REMAINING_TIME = 120;
+let REMAINING_TIME = 1200;
 
 window.setInterval(setTimer, 1000);
 
@@ -359,7 +359,7 @@ class Letter {
     ltr.classList.add("show");
     ltr.setAttribute("id",this.id);
     ltr.style.textTransform = 'uppercase';
-    ltr.innerHTML = this.letter + '<sup>'+this.score+'</sup>';
+    ltr.innerHTML = '<div class="letter-offer"></div>'+this.letter + '<div class="letter-score">'+this.score+'</div>';
 
     return ltr;
   }
